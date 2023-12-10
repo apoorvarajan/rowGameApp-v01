@@ -1,0 +1,22 @@
+digraph G {
+  0 [label="manipulates inside move"];
+  1 [label="updates in endgame"];
+  2 [label="updates in updateBlock"];
+  3 [label="updates in updateBlock"];
+  4 [label="uses"];
+  5 [label="uses inside move"];
+  6 [label="TERMINAL",shape=diamond];
+  7 [label="INITIAL",shape=box];
+0->2 [label="P: 0.20"];
+0->3 [label="P: 0.80"];
+1->1 [label="P: 0.89"];
+1->6 [label="P: 0.11"];
+2->1 [label="P: 0.50"];
+2->2 [label="P: 0.50"];
+3->3 [label="P: 0.67"];
+3->5 [label="P: 0.33"];
+4->6 [label="P: 1.00"];
+5->0 [label="P: 1.00"];
+7->3 [label="P: 0.50"];
+7->4 [label="P: 0.50"];
+}
